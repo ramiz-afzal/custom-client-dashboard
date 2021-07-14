@@ -1,0 +1,108 @@
+.ccd_switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.ccd_switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ccd_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.ccd_slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .ccd_slider {
+  background-color: #008bdb;
+}
+
+input:focus + .ccd_slider {
+  box-shadow: 0 0 1px #008bdb;
+}
+
+input:checked + .ccd_slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* admin client profile fields styles */
+.cdd_client_selected_files {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: stretch;
+}
+.cdd_client_selected_files .cdd_client_file {
+  width: 100px;
+  background-color: #ececec;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cdd_client_selected_files .cdd_client_file:not(:first-child) {
+  margin-left: 10px;
+}
+
+.cdd_client_selected_files .cdd_client_file_remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1em;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: red;
+  cursor: pointer;
+}
+.cdd_client_selected_files .cdd_client_file_icon {
+  height: auto;
+  width: 50%;
+  max-width: 50%;
+  margin: 10px auto;
+}
+.cdd_client_selected_files .cdd_client_label {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

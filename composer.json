@@ -1,0 +1,19 @@
+{
+  "name": "ramiz/custom-client-dashboard",
+  "description": "Creates custom user role for clients and provides access protection",
+  "type": "project",
+  "license": "GPL v2 or later",
+  "authors": [
+    {
+      "name": "ramiz-afzal",
+      "email": "m.ramiz.afzal@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Inc\\": "./inc"
+    }
+  }
+}
